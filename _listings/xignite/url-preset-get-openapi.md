@@ -1,12 +1,13 @@
+---
 swagger: "2.0"
 x-collection-name: Xignite
-x-complete: 1
+x-complete: 0
 info:
-  title: Xignite VWAP
-  description: provides-delayed-and-historical-volumeweightedaverage-price-vwap-information-
+  title: Xignite Statistics Get Chart Url Preset
+  description: Get chart url for a topic.
   version: 1.0.0
 host: www.xignite.com
-basePath: xVWAP.json/XigniteVWAP
+basePath: xStatistics.json/XigniteStatistics
 schemes:
 - http
 produces:
@@ -112,22 +113,17 @@ paths:
       - Chart
       - Url
       - Preset
-  ', Binary, Preset':
-    get:
-      summary: Get Chart Binary Preset
-      description: Get chart in binary format for a topic.
-      operationId: postGetchartbinarypreset
-      x-api-path-slug: binary-preset-get
-      parameters:
-      - in: body
-        name: body
-        schema:
-          $ref: '#/definitions/holder'
-      responses:
-        200:
-          description: OK
-      tags:
-      - Market Data
-      - Chart
-      - Binary
-      - Preset
+x-streamrank:
+  polling_total_time_average: 0
+  polling_size_download_average: 0
+  streaming_total_time_average: 0
+  streaming_size_download_average: 0
+  change_yes: 0
+  change_no: 0
+  time_percentage: 0
+  size_percentage: 0
+  change_percentage: 0
+  last_run: ""
+  days_run: 0
+  minute_run: 0
+---
